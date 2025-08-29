@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora — Modern Styled Website</title>
+  <meta name="description" content="A fully styled sample website with responsive layout, dark mode, animations, and contact form.">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Simple icon set (Feather icons via CDN) -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Aurora Home">
+        <svg class="brand-logo" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#7C3AED"/>
+              <stop offset="100%" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="6" stroke="url(#g)" stroke-width="1.5"/>
+          <path d="M7 12c1.5-3 4.5-4 7-2" stroke="url(#g)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">Aurora</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-pressed="false" title="Toggle dark mode">
+          <i data-feather="moon"></i>
+        </button>
+        <button id="mobileMenuBtn" class="btn-icon mobile-only" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#features" class="mobile-link">Features</a></li>
+        <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+        <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Design forward. Build faster.</h1>
+          <p class="hero-sub">A modern, accessible, and responsive starter website — beautifully styled and production ready. Perfect for portfolios, product landing pages, and small businesses.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contact">Get Started</a>
+            <a class="btn btn-ghost" href="#portfolio">See Work</a>
+          </div>
+
+          <div class="features-inline" aria-hidden="true">
+            <div class="pill"><i data-feather="zap"></i> Fast</div>
+            <div class="pill"><i data-feather="shield"></i> Accessible</div>
+            <div class="pill"><i data-feather="cpu"></i> Modern</div>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <div class="mockup">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b7c4dfd3f0a3e3c1c7e31e7b6b1b2b9" alt="Stylized sample screenshot">
+            <div class="mockup-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What you get</h2>
+          <p class="muted">Handcrafted components, strong responsiveness, and thoughtful accessibility.</p>
+        </div>
+
+        <div class="grid features-grid">
+          <article class="card">
+            <div class="card-icon"><i data-feather="layout"></i></div>
+            <h3>Responsive layout</h3>
+            <p>Design that adapts to every screen using CSS Grid & Flexbox for robust layouts.</p>
+            <a class="card-link" href="#features">Learn more →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon"><i data-feather="cpu"></i></div>
+            <h3>Performant</h3>
+            <p>Optimized images, minimal JS, and sensible defaults to keep load times low.</p>
+            <a class="card-link" href="#features">Learn more →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon"><i data-feather="globe"></i></div>
+            <h3>Accessible</h3>
+            <p>Keyboard navigable, semantic markup, and high color contrast for inclusive experiences.</p>
+            <a class="card-link" href="#features">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>Portfolio</h2>
+          <p class="muted">A few sample projects — click to enlarge.</p>
+        </div>
+
+        <div class="grid gallery-grid" id="gallery">
+          <!-- gallery items -->
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0bb8f3a6b6c3a3da1a1f9e9f9c8c7b6a" alt="Project screenshot 1">
+            <figcaption>Project Alpha</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1523475496153-3d6cc1b4c422?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f8f2c8b6c75f4f7a8a9b5aa7b9d3e2f" alt="Project screenshot 2">
+            <figcaption>Project Beta</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3cc9d4aa5d6a0c1d0e5f5b2a3b4c7d1f" alt="Project screenshot 3">
+            <figcaption>Project Gamma</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f7d4c3e4e9b8c7d6e5f4a3b2c1d0e9a" alt="Project screenshot 4">
+            <figcaption>Project Delta</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+        <button class="lightbox-close" aria-label="Close preview"><i data-feather="x"></i></button>
+        <img class="lightbox-img" alt="">
+        <p class="lightbox-caption"></p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What people say</h2>
+          <p class="muted">Real feedback from happy customers.</p>
+        </div>
+
+        <div class="grid testimonials-grid">
+          <blockquote class="testimonial">
+            <p>"Aurora helped us ship faster and with confidence — the components are crisp and accessible."</p>
+            <footer>— Maya R., Product Lead</footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>"Beautifully styled and easy to adapt. Saved our team weeks of design work."</p>
+            <footer>— Daniel K., Founder</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt-bg">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Contact</h2>
+          <p class="muted">Have a project or question? Send a message — I'll reply within a business day.</p>
+
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:hello@aurora.example">hello@aurora.example</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><strong>Location:</strong> Remote / Worldwide</li>
+          </ul>
+
+          <div class="social">
+            <a class="social-link" href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+            <a class="social-link" href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            <a class="social-link" href="#" aria-label="GitHub"><i data-feather="github"></i></a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required minlength="2" placeholder="Jane Doe">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Brief description of your project..."></textarea>
+
+          <div class="form-row">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Aurora. Built with ❤️</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#top">Back to top</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    // initialize feather icons
+    feather.replace();
+  </script>
+</body>
+</html>
